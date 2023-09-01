@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { data } from '../assets/mainData'
 import star from '../assets/images/star.png'
 
-const SinglePage = ({props , updateSteps}) => {
+const SinglePage = ({ updateSteps }) => {
 
   const { id } = useParams()
 
