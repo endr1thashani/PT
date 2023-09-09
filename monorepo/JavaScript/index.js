@@ -16,10 +16,20 @@ shuffleCheckBox.addEventListener("click", function (e) {
 
 changeCheckBox.addEventListener("click", function (e) {
     e.preventDefault();
-    const checkboxes = Array.from(checkboxForm.elements.checkbox);
-    checkboxes.forEach((checkbox) => {
-        checkbox.value = "Task Pabau";
+    const spans = form.querySelectorAll('span');
+    const spanText = [
+        "First Text",
+        "Second Text",
+        "Third Text",
+        "Fourth Text"
+    ];
+    spans.forEach((span ,index) => {
+        span.textContent = spanText[index];
     });
+    const checkboxes = Array.from(form.elements.checkbox);
+    checkboxes.forEach((checkbox ,index)=> {
+        checkbox.value = spanText[index]
+    })
 });
 
 showCheckBox.addEventListener("click", function (e) {
